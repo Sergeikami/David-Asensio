@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 # Declare member variables here. Examples:
 var velocitat := 50000
-var moviment := Vector2(0,0)
+var moviment := Vector2.ZERO
 
 
 # Called when the node enters the scene tree for the first time.
