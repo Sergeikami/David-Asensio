@@ -1,5 +1,6 @@
 extends KinematicBody2D
-var velocitat := 50
+var velocitat := 5000
+var moviment := Vector2.ZERO
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -8,28 +9,17 @@ var velocitat := 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position = Vector2(500,300)
+	position = Vector2(0,0)
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("ves_dreta"):
-		if Input.is_action_pressed("ves_dreta") and Input.is_action_pressed("ves_amunt"):
-			position += Vector2(0.707,-0.707) * velocitat * delta
-		elif Input.is_action_pressed("ves_dreta") and Input.is_action_pressed("ves_abaix"):
-			position += Vector2(0.707,0.707) * velocitat * delta
-		else:
-			position += Vector2(1,0) * velocitat * delta
-	elif Input.is_action_pressed("ves_esquerra"):
-		if Input.is_action_pressed("ves_esquerra") and Input.is_action_pressed("ves_amunt"):
-			position += Vector2(-0.707,-0.707) * velocitat * delta
-		elif Input.is_action_pressed("ves_esquerra") and Input.is_action_pressed("ves_abaix"):
-			position += Vector2(-0.707,0.707) * velocitat * delta
-		else:
-			position += Vector2(-1,0) * velocitat * delta
+		moviment = move_and_slide(Vector2.RIGHT * velocitat * delta, Vector2.RIGHT) * velocitat
 	elif Input.is_action_pressed("ves_amunt"):
-		position += Vector2(0,-1) * velocitat * delta
+		moviment = move_and_slide(Vector2.UP * velocitat * delta, Vector2.ZERO) * velocitat
+	elif Input.is_action_pressed("ves_esquerra"):
+		moviment = move_and_slide(Vector2.LEFT * velocitat * delta, Vector2.LEFT) * velocitat
 	elif Input.is_action_pressed("ves_abaix"):
-		position += Vector2(0,1) * velocitat * delta
-	
+		moviment = move_and_slide(Vector2.DOWN * velocitat * delta, Vector2.ZERO) * velocitat
 	
