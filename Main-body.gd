@@ -23,3 +23,4 @@ func _process(delta):
 	elif Input.is_action_pressed("ves_abaix"):
 		moviment = move_and_slide(Vector2.DOWN * velocitat * delta, Vector2.ZERO) * velocitat
 	
+	
