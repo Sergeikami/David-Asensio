@@ -5,7 +5,7 @@ var moviment := Vector2.ZERO
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var n := 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,4 +23,11 @@ func _process(delta):
 	elif Input.is_action_pressed("ves_abaix"):
 		moviment = move_and_slide(Vector2.DOWN * velocitat * delta, Vector2.ZERO) * velocitat
 	
+	
+func _on_Area2D_body_entered(body):
+	if n < 1:
+		position = Vector2(0,0)
+		n = 2
+	else:
+		n -= 1
 	

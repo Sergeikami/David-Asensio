@@ -12,6 +12,7 @@ tile_data = PoolIntArray( -1900534, 27, 0, -1900533, 26, 0, -1900532, 26, 0, -19
 
 [node name="Enemic 1" parent="TileMap" instance=ExtResource( 3 )]
 position = Vector2( 154, 25 )
+script = null
 
 [node name="Main-body" parent="." instance=ExtResource( 1 )]
 scale = Vector2( 0.8, 0.8 )
