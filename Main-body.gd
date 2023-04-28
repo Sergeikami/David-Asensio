@@ -30,7 +30,7 @@ func _on_Area2D_body_entered(body):
 	$Timer.start()
 	if n < 1:
 		position = Vector2(0,0)
-		n = 3
+		n = 4
 	else:
 		n -= 1
 	
