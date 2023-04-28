@@ -6,7 +6,7 @@ var moviment := Vector2.ZERO
 # var a = 2
 # var b = "text"
 var n := 3
-
+var dins := false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	position = Vector2(0,0)
@@ -25,9 +25,28 @@ func _process(delta):
 	
 	
 func _on_Area2D_body_entered(body):
+	dins = true
+	
+	$Timer.start()
 	if n < 1:
 		position = Vector2(0,0)
 		n = 3
 	else:
 		n -= 1
 	
+
+
+func _on_Area2D_body_exited(body):
+	dins = false
+	$Timer.stop()
+	
+
+
+func _on_Timer_timeout():
+	if dins == true:
+		if n < 1:
+			position = Vector2(0,0)
+			n = 3
+		else:
+			n -= 1
+		
