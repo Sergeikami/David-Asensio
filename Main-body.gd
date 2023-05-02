@@ -5,7 +5,7 @@ var moviment := Vector2.ZERO
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var n := 3
+var n := 4
 var dins := false
 # Called when the node enters the scene tree for the first time.
 func _ready():
