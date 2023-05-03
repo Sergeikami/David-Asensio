@@ -7,21 +7,22 @@
 script/source = "extends KinematicBody2D
 
 var el_segueixo = false
-var speed := 5000
-var velocitat := Vector2()
-# Called when the node enters the scene tree for the first time.
+var speed := 55
+var velocitat := Vector2.ZERO
+
 func _on_Area2D_body_entered(body):
 	if body.name == 'Main-body':
 		el_segueixo = true
 
-
 func _physics_process(delta):
-	var desti = Global.Jugador.global_position
 	if el_segueixo:
-		velocitat = position.direction_to(desti) * speed
-		if position.distance_to(desti) > 5:
-			velocitat = move_and_slide(velocitat)
-
+		velocitat = position.direction_to(Global.Jugador.global_position)
+	else:
+		velocitat = Vector2.ZERO
+		
+	velocitat = velocitat.normalized() * speed
+	
+	velocitat = move_and_slide(velocitat)
 "
 
 [sub_resource type="RectangleShape2D" id=4]

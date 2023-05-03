@@ -1,9 +1,9 @@
 extends KinematicBody2D
-var velocitat := 5000
-var moviment := Vector2.ZERO
+var velocitat := 65
+var moviment := Vector2()
 
 # Declare member variables here. Examples:
-# var a = 2
+# var a = 2wwwwwwwww
 # var b = "text"
 var n := 4
 var dins := false
@@ -11,20 +11,26 @@ var dins := false
 func _ready():
 	position = Vector2(0,0)
 	Global.Jugador = self
-	
+	if n = 5:
+		
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func get_input():
+	moviment = Vector2()
 	if Input.is_action_pressed("ves_dreta"):
-		moviment = move_and_slide(Vector2.RIGHT * velocitat * delta, Vector2.RIGHT) * velocitat
-	elif Input.is_action_pressed("ves_amunt"):
-		moviment = move_and_slide(Vector2.UP * velocitat * delta, Vector2.ZERO) * velocitat
-	elif Input.is_action_pressed("ves_esquerra"):
-		moviment = move_and_slide(Vector2.LEFT * velocitat * delta, Vector2.LEFT) * velocitat
-	elif Input.is_action_pressed("ves_abaix"):
-		moviment = move_and_slide(Vector2.DOWN * velocitat * delta, Vector2.ZERO) * velocitat
+		moviment.x += 1
+	if Input.is_action_pressed("ves_esquerra"):
+		moviment.x -= 1
+	if Input.is_action_pressed("ves_abaix"):
+		moviment.y += 1
+	if Input.is_action_pressed("ves_amunt"):
+		moviment.y -= 1
+	moviment = moviment.normalized() * velocitat
 	
+func _physics_process(delta):
+	get_input()
+	moviment = move_and_slide(moviment)
 	
 func _on_Area2D_body_entered(body):
 	dins = true
@@ -52,3 +58,4 @@ func _on_Timer_timeout():
 		else:
 			n -= 1
 		
+
