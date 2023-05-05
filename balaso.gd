@@ -1,14 +1,19 @@
 extends Area2D
 
-var velocitat = Vector2.ZERO
-var balaso = balaso.instance()
+var dir : Vector2
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var speed = 100
 
+func fire(origin : Vector2, dest : Vector2):
+	dir = origin.direction_to(dest)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	position += velocitat * delta
-	get_parent().add_child(balaso)
+func _process(delta):
+	if dir:
+		global_position += dir * delta * speed
+
+func _on_Balaso_body_entered(body):
+	if body.is_on_goup('enemics'):
+		queue_free()
+
+func _on_VisibilityNotifier2D_screen_exited():
+	queue_free()

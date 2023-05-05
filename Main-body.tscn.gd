@@ -1,7 +1,7 @@
 extends KinematicBody2D
 var velocitat := 65
 var moviment := Vector2()
-var dest_balaso_rec = preload("res://Balaso.tscn")
+var dest_balaso_rec = preload("res://Balaso.gd")
 
 # Declare member variables here. Examples:
 # var a = 2wwwwwwwww
