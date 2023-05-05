@@ -11,7 +11,6 @@ var dins := false
 func _ready():
 	position = Vector2(0,0)
 	Global.Jugador = self
-	if n = 5:
 		
 	
 
@@ -37,7 +36,7 @@ func _on_Area2D_body_entered(body):
 	
 	$Timer.start()
 	if n < 1:
-		position = Vector2(0,0)
+		get_tree().reload_current_scene()
 		n = 4
 	else:
 		n -= 1
