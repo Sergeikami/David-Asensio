@@ -33,6 +33,8 @@ func _physics_process(delta):
 	moviment = move_and_slide(moviment)
 	
 func _on_Area2D_body_entered(body):
+	if body.is_in_group("Balasos_multiples"):
+		return
 	dins = true
 	
 	$Timer.start()
@@ -64,4 +66,4 @@ func _input(event):
 		var dest_balaso_inst = dest_balaso_rec.instance()
 		dest_balaso_inst.fire($Sprite/vara.global_position, get_global_mouse_position())
 		dest_balaso_inst.global_position = $Sprite/vara.global_position
-		add_child(dest_balaso_inst)
+		Global.Bales.add_child(dest_balaso_inst)
