@@ -52,7 +52,7 @@ texture = ExtResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.125, 0.125 )
+zoom = Vector2( 0.15, 0.15 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3.5 )
@@ -171,6 +171,10 @@ shape = SubResource( 11 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.65
 
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.05
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
