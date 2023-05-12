@@ -2,6 +2,7 @@ extends KinematicBody2D
 var velocitat := 65
 var moviment := Vector2()
 var dest_balaso_rec = preload("res://Balaso.tscn")
+var m = 100
 
 # Declare member variables here. Examples:
 # var a = 2wwwwwwwww
@@ -12,9 +13,12 @@ var dins := false
 func _ready():
 	position = Vector2(0,0)
 	Global.Jugador = self
-		
 	
-
+func _process(delta):
+	if m == 100:
+		pass
+	else:
+		$Timer2.start()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func get_input():
 	moviment = Vector2()
@@ -59,11 +63,18 @@ func _on_Timer_timeout():
 			n = 4
 		else:
 			n -= 1
-		
 
 func _input(event):
 	if event.is_action_pressed('click'):
-		var dest_balaso_inst = dest_balaso_rec.instance()
-		dest_balaso_inst.fire($Sprite/vara.global_position, get_global_mouse_position())
-		dest_balaso_inst.global_position = $Sprite/vara.global_position
-		Global.Bales.add_child(dest_balaso_inst)
+		if m < 10:
+			pass
+		else:
+			var dest_balaso_inst = dest_balaso_rec.instance()
+			dest_balaso_inst.fire($Sprite/vara.global_position, get_global_mouse_position())
+			dest_balaso_inst.global_position = $Sprite/vara.global_position
+			Global.Bales.add_child(dest_balaso_inst)
+			m -= 10
+
+func _on_Timer2_timeout():
+	m += 1
+	print(m)

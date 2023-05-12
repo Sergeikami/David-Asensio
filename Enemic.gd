@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 var el_segueixo = false
-var speed := 55
+var speed := 75
 var velocitat := Vector2.ZERO
 var v := 2
 

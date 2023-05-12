@@ -2,7 +2,7 @@ extends Area2D
 
 var dir : Vector2
 
-var speed = 100
+var speed = 140
 
 func fire(origin : Vector2, dest : Vector2):
 	dir = origin.direction_to(dest)
