@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	if m == 100:
 		pass
-	else:
+	elif $Timer2.is_stopped():
 		$Timer2.start()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func get_input():
@@ -77,4 +77,3 @@ func _input(event):
 
 func _on_Timer2_timeout():
 	m += 1
-	print(m)
