@@ -1,10 +1,9 @@
 extends KinematicBody2D
 
-
 var el_segueixo = false
 var speed := 55
 var velocitat := Vector2.ZERO
-var v := 2
+var v := 10
 
 
 func _physics_process(delta):
@@ -30,4 +29,9 @@ func _on_hitbox_body_entered(body):
 		if v == 0:
 			queue_free()
 		else:
-			v -= 2
+			v -= 0.5
+
+
+
+
+
