@@ -19,6 +19,8 @@ func _process(delta):
 		pass
 	elif $Timer2.is_stopped():
 		$Timer2.start()
+	$CanvasLayer/Magia.value = m
+	$CanvasLayer/Vida.value = n * 20 + 20
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func get_input():
 	moviment = Vector2()
@@ -43,7 +45,8 @@ func _on_Area2D_body_entered(body):
 	
 	$Timer.start()
 	if n < 1:
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://mort.tscn")
+		$Timer3.start()
 		n = 4
 	else:
 		n -= 1
@@ -59,7 +62,8 @@ func _on_Area2D_body_exited(body):
 func _on_Timer_timeout():
 	if dins == true:
 		if n < 1:
-			get_tree().reload_current_scene()
+			get_tree().change_scene("res://mort.tscn")
+			$Timer3.start()
 			n = 4
 		else:
 			n -= 1
@@ -77,3 +81,8 @@ func _input(event):
 
 func _on_Timer2_timeout():
 	m += 1
+
+
+func _on_Timer3_timeout():
+	get_tree().change_scene("res://Node2D.tscn")
+	get_tree().reload_current_scene()

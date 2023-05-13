@@ -19,6 +19,8 @@ func _physics_process(delta):
 	velocitat = velocitat.normalized() * speed
 	
 	move_and_slide(velocitat)
+	
+	$TextureProgress.value = v * 33.3 + 33.3
 
 
 func _on_Area2D_body_entered(body):
