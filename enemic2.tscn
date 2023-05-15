@@ -8,9 +8,8 @@
 radius = 12.0
 height = 4.0
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 133.58
-height = 1024.0
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 930.459, 93.8664 )
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 13.0
@@ -37,8 +36,9 @@ scale = Vector2( 1, 1.03333 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, -8.7738e-05 )
-shape = SubResource( 2 )
+position = Vector2( 7.38463, 5.86657 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
 
 [node name="Tile0103" type="Sprite" parent="Area2D"]
 position = Vector2( -76.9049, 22.948 )
