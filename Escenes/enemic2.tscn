@@ -1,8 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://enemic2.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/enemic2.gd" type="Script" id=1]
 [ext_resource path="res://tile_0103.png" type="Texture" id=2]
-[ext_resource path="res://tilemap_packed.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/tilemap_packed.png" type="Texture" id=3]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0

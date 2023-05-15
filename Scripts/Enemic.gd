@@ -32,4 +32,5 @@ func _on_hitbox_body_entered(body):
 		if v == 0:
 			queue_free()
 		else:
-			v -= 2
+			v -= 1
+		Balasos.queue_free()
