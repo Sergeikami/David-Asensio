@@ -1,10 +1,9 @@
 extends KinematicBody2D
 
-
 var el_segueixo = false
-var speed := 60
+var speed := 55
 var velocitat := Vector2.ZERO
-var v := 2
+var v := 10
 
 
 func _physics_process(delta):
@@ -19,8 +18,6 @@ func _physics_process(delta):
 	velocitat = velocitat.normalized() * speed
 	
 	move_and_slide(velocitat)
-	
-	$TextureProgress.value = v * 33.3 + 33.3
 
 
 func _on_Area2D_body_entered(body):
@@ -32,4 +29,9 @@ func _on_hitbox_body_entered(body):
 		if v == 0:
 			queue_free()
 		else:
-			v -= 2
+			v -= 0.5
+
+
+
+
+
