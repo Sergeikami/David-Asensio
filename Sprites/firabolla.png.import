@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roguelikeDungeon_transparent.png-e6a23807ea29c20b43dca4aaefffb428.stex"
+path="res://.import/firabolla.png-77d1c5bc854b19a557514570d5e116b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://roguelikeDungeon_transparent.png"
-dest_files=[ "res://.import/roguelikeDungeon_transparent.png-e6a23807ea29c20b43dca4aaefffb428.stex" ]
+source_file="res://Sprites/firabolla.png"
+dest_files=[ "res://.import/firabolla.png-77d1c5bc854b19a557514570d5e116b7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

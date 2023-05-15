@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vidaEnemic.png-3f7bcffb36f39778cf4e0837481b8a30.stex"
+path="res://.import/vidafonsenemic.png-56777acc5aba1edd9d72ec976be90d3f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vidaEnemic.png"
-dest_files=[ "res://.import/vidaEnemic.png-3f7bcffb36f39778cf4e0837481b8a30.stex" ]
+source_file="res://Sprites/vidafonsenemic.png"
+dest_files=[ "res://.import/vidafonsenemic.png-56777acc5aba1edd9d72ec976be90d3f.stex" ]
 
 [params]
 

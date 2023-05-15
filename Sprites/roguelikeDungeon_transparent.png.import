@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile_0129.png-43eb41f8d394e884d95a061634b14468.stex"
+path="res://.import/roguelikeDungeon_transparent.png-8b8458351217a3f6fec50f0f65ea4ce2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile_0129.png"
-dest_files=[ "res://.import/tile_0129.png-43eb41f8d394e884d95a061634b14468.stex" ]
+source_file="res://Sprites/roguelikeDungeon_transparent.png"
+dest_files=[ "res://.import/roguelikeDungeon_transparent.png-8b8458351217a3f6fec50f0f65ea4ce2.stex" ]
 
 [params]
 

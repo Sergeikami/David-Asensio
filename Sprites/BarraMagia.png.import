@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FonsMagia.png-ab5fa190c32777aeeedb46c832c4433f.stex"
+path="res://.import/BarraMagia.png-a022aba605811eb800ad5ca56d07b67c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FonsMagia.png"
-dest_files=[ "res://.import/FonsMagia.png-ab5fa190c32777aeeedb46c832c4433f.stex" ]
+source_file="res://Sprites/BarraMagia.png"
+dest_files=[ "res://.import/BarraMagia.png-a022aba605811eb800ad5ca56d07b67c.stex" ]
 
 [params]
 

@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Start_pressed():
-	get_tree().change_scene("res://Node2D.tscn")
+	get_tree().change_scene("res://Escenes/Node2D.tscn")
 
 
 func _on_Sortir_pressed():

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile_0088.png-31baf812a7abb3ade1ba33dbbc74e1ac.stex"
+path="res://.import/FonsMagia.png-e567575af27a13f71bb88b0736d91af2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile_0088.png"
-dest_files=[ "res://.import/tile_0088.png-31baf812a7abb3ade1ba33dbbc74e1ac.stex" ]
+source_file="res://Sprites/FonsMagia.png"
+dest_files=[ "res://.import/FonsMagia.png-e567575af27a13f71bb88b0736d91af2.stex" ]
 
 [params]
 

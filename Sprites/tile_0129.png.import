@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vidafonsenemic.png-70a4971d86b545905068dc5abb1a543a.stex"
+path="res://.import/tile_0129.png-4cf0948cde684a1f0580b8d3d7d79076.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://vidafonsenemic.png"
-dest_files=[ "res://.import/vidafonsenemic.png-70a4971d86b545905068dc5abb1a543a.stex" ]
+source_file="res://Sprites/tile_0129.png"
+dest_files=[ "res://.import/tile_0129.png-4cf0948cde684a1f0580b8d3d7d79076.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

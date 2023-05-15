@@ -1,7 +1,7 @@
 extends KinematicBody2D
 var velocitat := 65
 var moviment := Vector2()
-var dest_balaso_rec = preload("res://Balaso.tscn")
+var dest_balaso_rec = preload("res://Escenes/Balaso.tscn")
 var m = 100
 
 # Declare member variables here. Examples:
@@ -15,8 +15,8 @@ func _ready():
 	Global.Jugador = self
 	
 func _process(delta):
-	if m == 100:
-		pass
+	if m > 100:
+		m = 100
 	elif $Timer2.is_stopped():
 		$Timer2.start()
 	$CanvasLayer/Magia.value = m
@@ -45,8 +45,7 @@ func _on_Area2D_body_entered(body):
 	
 	$Timer.start()
 	if n < 1:
-		get_tree().change_scene("res://mort.tscn")
-		$Timer3.start()
+		get_tree().change_scene("res://Escenes/mort.tscn")
 		n = 4
 	else:
 		n -= 1
@@ -62,8 +61,7 @@ func _on_Area2D_body_exited(body):
 func _on_Timer_timeout():
 	if dins == true:
 		if n < 1:
-			get_tree().change_scene("res://mort.tscn")
-			$Timer3.start()
+			get_tree().change_scene("res://Escenes/mort.tscn")
 			n = 4
 		else:
 			n -= 1
@@ -81,8 +79,3 @@ func _input(event):
 
 func _on_Timer2_timeout():
 	m += 1
-
-
-func _on_Timer3_timeout():
-	get_tree().change_scene("res://Node2D.tscn")
-	get_tree().reload_current_scene()

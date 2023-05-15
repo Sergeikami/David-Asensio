@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Menu.gd" type="Script" id=1]
-[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/new_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
 
 [node name="Menu" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = -2012.0
@@ -27,14 +27,14 @@ rect_scale = Vector2( 1.2, 1.2 )
 [node name="Start" type="Button" parent="VBoxContainer"]
 margin_right = 374.0
 margin_bottom = 29.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "JUGAR"
 
 [node name="Sortir" type="Button" parent="VBoxContainer"]
 margin_top = 33.0
 margin_right = 374.0
 margin_bottom = 62.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "SORTIR"
 
 [node name="Camera2D" type="Camera2D" parent="."]
