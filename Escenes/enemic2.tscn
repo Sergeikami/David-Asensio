@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/enemic2.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/vidaEnemic.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/tilemap_packed.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/vidafonsenemic.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
@@ -36,7 +38,6 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 81.2307, -5.8667 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 4 )
 
 [node name="Tile0103" type="Sprite" parent="Area2D"]
@@ -50,6 +51,16 @@ position = Vector2( 19, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( -19, 2 )
 shape = SubResource( 3 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = -24.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = -13.0
+rect_scale = Vector2( 0.75, 1 )
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 2 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

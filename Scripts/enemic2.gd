@@ -18,6 +18,8 @@ func _physics_process(delta):
 	velocitat = velocitat.normalized() * speed
 	
 	move_and_slide(velocitat)
+	
+	$TextureProgress.value = v *10 + 10
 
 
 func _on_Area2D_body_entered(body):
@@ -28,6 +30,7 @@ func _on_hitbox_body_entered(body):
 	if body.is_in_group('Balasos_multiples'):
 		if v == 0:
 			queue_free()
+			get_tree().change_scene("res://Escenes/Final.tscn")
 		else:
 			v -= 1
 		body.queue_free()

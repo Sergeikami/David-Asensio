@@ -27,8 +27,9 @@ margin_right = -149.0
 margin_bottom = -14.0
 rect_scale = Vector2( 3, 3 )
 custom_fonts/font = ExtResource( 1 )
-text = "YOU ARE THE ONLY SOUL STANDING"
+text = "TOTS HAN MORT"
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
